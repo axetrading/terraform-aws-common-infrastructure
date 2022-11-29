@@ -1,16 +1,16 @@
 #RDS OUTPUTS
 output "rds_cluster_name" {
-  value = try(module.rds[0].rds_cluster_name, "")
+  value       = try(module.rds[0].rds_cluster_name, "")
   description = "Aurora RDS Cluster Name"
 }
 
 output "rds_cluster_arn" {
-  value = try(module.rds[0].rds_cluster_arn, "")
+  value       = try(module.rds[0].rds_cluster_arn, "")
   description = "Aurora RDS Cluster ARN"
 }
 
 output "rds_cluster_endpoint" {
-  value = try(module.rds[0].rds_cluster_endpoint, "")
+  value       = try(module.rds[0].rds_cluster_endpoint, "")
   description = "Main endpoint for the Aurora RDS cluster"
 }
 
