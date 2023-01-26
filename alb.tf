@@ -1,7 +1,7 @@
 module "alb" {
   for_each = var.load_balancers
   source   = "axetrading/load-balancer/aws"
-  version  = "1.1.1"
+  version  = "1.2.0"
 
   name                   = each.value.load_balancer_name
   load_balancer_type     = each.value.load_balancer_type
