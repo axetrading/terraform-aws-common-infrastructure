@@ -144,6 +144,12 @@ variable "tags" {
   default     = {}
 }
 
+variable "rds_tags" {
+  type        = map(string)
+  description = "A map of tags that will be assigned to RDS"
+  default     = {}
+}
+
 
 variable "rds_subnet_ids" {
   type        = list(string)

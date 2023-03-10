@@ -25,6 +25,6 @@ module "rds" {
   vpc_id                      = var.vpc_id
   vpc_security_group_ids      = var.vpc_security_group_ids
 
-  tags = var.tags
+  tags = var.rds_tags
 
 }
