@@ -1,7 +1,7 @@
 module "alb" {
   for_each = var.load_balancers
   source   = "axetrading/load-balancer/aws"
-  version  = "1.2.0"
+  version  = "1.3.2"
 
   name                   = each.value.load_balancer_name
   load_balancer_type     = each.value.load_balancer_type
@@ -15,6 +15,9 @@ module "alb" {
   subnets                = each.value.lb_subnet_ids
   target_groups          = each.value.target_groups_spec
   vpc_id                 = each.value.vpc_id
+  enable_access_logs     = each.value.enable_access_logs
+  access_logs_bucket     = each.value.access_logs_bucket
+  access_logs_prefix     = each.value.access_logs_prefix
 
   tags = var.tags
 }
