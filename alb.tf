@@ -20,6 +20,7 @@ module "alb" {
   subnets                     = each.value.lb_subnet_ids
   target_groups               = each.value.target_groups_spec
   vpc_id                      = each.value.vpc_id
+  region                      = var.s3_bucket_region
 
   tags = var.tags
 }

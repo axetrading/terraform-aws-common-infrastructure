@@ -162,3 +162,9 @@ variable "master_username" {
   description = "RDS Master Username"
   default     = "dbadmin"
 }
+
+variable "s3_bucket_region" {
+  type        = string
+  description = "The region where the S3 bucket will be created"
+  default     = "eu-west-2"
+}
