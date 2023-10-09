@@ -13,6 +13,7 @@ module "alb" {
   existing_access_logs_bucket = try(each.value.existing_access_logs_bucket, null)
   http_listener_enabled       = try(each.value.http_listener_enabled, true)
   https_listener_enabled      = try(each.value.https_listener_enabled, true)
+  idle_timeout                = try(each.value.idle_timeout, 60)
   load_balancer_type          = each.value.load_balancer_type
   security_group_name         = try(each.value.create_lb_security_group, true) ? each.value.lb_security_group_name : null
   security_group_rules        = try(each.value.create_lb_security_group, true) ? each.value.lb_security_group_rules : null
