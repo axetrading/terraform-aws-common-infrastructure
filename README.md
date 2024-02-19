@@ -10,8 +10,8 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_alb"></a> [alb](#module\_alb) | axetrading/load-balancer/aws | 1.3.2 |
-| <a name="module_rds"></a> [rds](#module\_rds) | axetrading/axetrading-aurora-rds-cluster/aws | 1.2.0 |
+| <a name="module_alb"></a> [alb](#module\_alb) | axetrading/load-balancer/aws | 1.3.3 |
+| <a name="module_rds"></a> [rds](#module\_rds) | axetrading/axetrading-aurora-rds-cluster/aws | 1.3.3 |
 
 ## Inputs
 

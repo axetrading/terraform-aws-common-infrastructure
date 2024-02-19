@@ -1,7 +1,7 @@
 
 module "rds" {
   source  = "axetrading/axetrading-aurora-rds-cluster/aws"
-  version = "1.2.0"
+  version = "1.3.3"
   count   = var.create_rds_cluster ? 1 : 0
 
 
