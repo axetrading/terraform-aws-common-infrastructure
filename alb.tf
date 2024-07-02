@@ -1,7 +1,7 @@
 module "alb" {
   for_each = var.load_balancers
   source   = "axetrading/load-balancer/aws"
-  version  = "1.3.3"
+  version  = "1.3.13"
 
   name                        = each.value.load_balancer_name
   access_logs_bucket_name     = try(each.value.access_logs_bucket, null)
