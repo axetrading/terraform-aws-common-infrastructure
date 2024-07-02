@@ -168,3 +168,21 @@ variable "s3_bucket_region" {
   description = "The region where the S3 bucket will be created"
   default     = "eu-west-2"
 }
+
+variable "performance_insights_enabled" {
+  description = "Boolean Flag to control whether to enable performance insights or not"
+  type        = bool
+  default     = false
+}
+
+variable "performance_insights_kms_key_id" {
+  description = "ARN of KMS key to encrypt performance insights data"
+  type        = string
+  default     = null
+}
+
+variable "performance_insights_retention_period" {
+  description = "Amount of time in days to retain Performance Insights data"
+  type        = number
+  default     = 7
+}
