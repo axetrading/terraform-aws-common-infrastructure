@@ -1,7 +1,7 @@
 
 module "rds" {
   source  = "axetrading/axetrading-aurora-rds-cluster/aws"
-  version = "1.3.4"
+  version = "1.3.5"
   count   = var.create_rds_cluster ? 1 : 0
 
 
@@ -25,7 +25,7 @@ module "rds" {
   vpc_id                                = var.vpc_id
   vpc_security_group_ids                = var.vpc_security_group_ids
   performance_insights_enabled          = var.performance_insights_enabled
-  performance_insights_kms_key_id       = var.performance_insights_enabled ? var.performance_insights_kms_key_id : null
+  performance_insights_kms_key_id       = var.performance_insights_kms_key_id
   performance_insights_retention_period = var.performance_insights_retention_period
 
   tags = var.rds_tags
