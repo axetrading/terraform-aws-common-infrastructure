@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.2.6](https://github.com/axetrading/terraform-aws-common-infrastructure/compare/v1.2.5...v1.2.6) (2024-07-04)
+
+
+### Bug Fixes
+
+* updated performance insights kms key id ([5ab264e](https://github.com/axetrading/terraform-aws-common-infrastructure/commit/5ab264eda3467217db2641d2fea0dd68ee91bbb9))
+
 ### [1.2.5](https://github.com/axetrading/terraform-aws-common-infrastructure/compare/v1.2.4...v1.2.5) (2024-07-02)
 
 
