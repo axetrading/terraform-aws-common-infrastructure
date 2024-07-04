@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.2.7](https://github.com/axetrading/terraform-aws-common-infrastructure/compare/v1.2.6...v1.2.7) (2024-07-04)
+
+
+### Bug Fixes
+
+* added secrets_manager_kms_key_id variable to control encryption of secrets ([e806e93](https://github.com/axetrading/terraform-aws-common-infrastructure/commit/e806e9360e54f4f77fc210923c8fad48d636127e))
+
 ### [1.2.6](https://github.com/axetrading/terraform-aws-common-infrastructure/compare/v1.2.5...v1.2.6) (2024-07-04)
 
 
