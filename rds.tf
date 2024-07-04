@@ -27,7 +27,7 @@ module "rds" {
   performance_insights_enabled          = var.performance_insights_enabled
   performance_insights_kms_key_id       = var.performance_insights_kms_key_id
   performance_insights_retention_period = var.performance_insights_retention_period
-
+  secrets_manager_kms_key_id            = var.secrets_manager_kms_key_id
   tags = var.rds_tags
 
 }
