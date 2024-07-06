@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.2.8](https://github.com/axetrading/terraform-aws-common-infrastructure/compare/v1.2.7...v1.2.8) (2024-07-06)
+
+
+### Bug Fixes
+
+* fix load balancer ssl policy - bump the module up to have the latest changes ([c9bc6bf](https://github.com/axetrading/terraform-aws-common-infrastructure/commit/c9bc6bf43ba9ecdf3daa600204469017e6a2ef49))
+* fix load balancer ssl policy - bump the module up to have the latest changes ([9af9a79](https://github.com/axetrading/terraform-aws-common-infrastructure/commit/9af9a790045312d5b2298bce191b4eddb35146b0))
+
 ### [1.2.7](https://github.com/axetrading/terraform-aws-common-infrastructure/compare/v1.2.6...v1.2.7) (2024-07-04)
 
 
