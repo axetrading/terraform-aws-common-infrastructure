@@ -10,8 +10,8 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_alb"></a> [alb](#module\_alb) | axetrading/load-balancer/aws | 1.3.3 |
-| <a name="module_rds"></a> [rds](#module\_rds) | axetrading/axetrading-aurora-rds-cluster/aws | 1.3.3 |
+| <a name="module_alb"></a> [alb](#module\_alb) | axetrading/load-balancer/aws | ~> 1.3 |
+| <a name="module_rds"></a> [rds](#module\_rds) | axetrading/axetrading-aurora-rds-cluster/aws | 1.3.5 |
 
 ## Inputs
 
@@ -28,6 +28,9 @@
 | <a name="input_load_balancer_type"></a> [load\_balancer\_type](#input\_load\_balancer\_type) | AWS Load Balancer Type | `string` | `"application"` | no |
 | <a name="input_load_balancers"></a> [load\_balancers](#input\_load\_balancers) | AWS Load Balancers Configuration | `any` | `{}` | no |
 | <a name="input_master_username"></a> [master\_username](#input\_master\_username) | RDS Master Username | `string` | `"dbadmin"` | no |
+| <a name="input_performance_insights_enabled"></a> [performance\_insights\_enabled](#input\_performance\_insights\_enabled) | Boolean Flag to control whether to enable performance insights or not | `bool` | `false` | no |
+| <a name="input_performance_insights_kms_key_id"></a> [performance\_insights\_kms\_key\_id](#input\_performance\_insights\_kms\_key\_id) | ARN of KMS key to encrypt performance insights data | `string` | `null` | no |
+| <a name="input_performance_insights_retention_period"></a> [performance\_insights\_retention\_period](#input\_performance\_insights\_retention\_period) | Amount of time in days to retain Performance Insights data | `number` | `7` | no |
 | <a name="input_preferred_backup_window"></a> [preferred\_backup\_window](#input\_preferred\_backup\_window) | Daily time range during which the backups happen | `string` | `"04:00-06:00"` | no |
 | <a name="input_rds_apply_immediately"></a> [rds\_apply\_immediately](#input\_rds\_apply\_immediately) | Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is false | `bool` | `false` | no |
 | <a name="input_rds_cluster_identifier"></a> [rds\_cluster\_identifier](#input\_rds\_cluster\_identifier) | The cluster identifier. If omitted, Terraform will assign a random, unique identifier. | `string` | `null` | no |
@@ -41,6 +44,7 @@
 | <a name="input_rds_subnet_ids"></a> [rds\_subnet\_ids](#input\_rds\_subnet\_ids) | A list of subnet IDs that will be used to create a rds subnet group | `list(string)` | `null` | no |
 | <a name="input_rds_tags"></a> [rds\_tags](#input\_rds\_tags) | A map of tags that will be assigned to RDS | `map(string)` | `{}` | no |
 | <a name="input_s3_bucket_region"></a> [s3\_bucket\_region](#input\_s3\_bucket\_region) | The region where the S3 bucket will be created | `string` | `"eu-west-2"` | no |
+| <a name="input_secrets_manager_kms_key_id"></a> [secrets\_manager\_kms\_key\_id](#input\_secrets\_manager\_kms\_key\_id) | ARN or Id of the AWS KMS key to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default KMS key (the one named aws/secretsmanager). If the default KMS key with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time. | `string` | `""` | no |
 | <a name="input_skip_final_snapshot"></a> [skip\_final\_snapshot](#input\_skip\_final\_snapshot) | Determines whether a final DB snapshot is created before the DB cluster is deleted | `bool` | `false` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to assign to the resource | `map(string)` | `{}` | no |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | ID of the VPC where to create security group | `string` | `null` | no |
