@@ -1,7 +1,6 @@
 module "alb" {
   for_each = var.load_balancers
-  source   = "axetrading/load-balancer/aws"
-  version  = "~> 1.3"
+  source = "git@github.com:axetrading/terraform-aws-load-balancer.git?ref=v1.3.15"
 
   name                        = each.value.load_balancer_name
   access_logs_bucket_name     = try(each.value.access_logs_bucket, null)

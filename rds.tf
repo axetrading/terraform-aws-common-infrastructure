@@ -1,7 +1,6 @@
 
 module "rds" {
-  source  = "axetrading/axetrading-aurora-rds-cluster/aws"
-  version = "1.3.5"
+  source              = "git@github.com:axetrading/terraform-aws-axetrading-aurora-rds-cluster.git?ref=v1.3.5"
   count   = var.create_rds_cluster ? 1 : 0
 
 
